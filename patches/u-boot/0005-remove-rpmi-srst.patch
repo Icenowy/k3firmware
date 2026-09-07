@@ -1,0 +1,22 @@
+diff --git a/arch/riscv/dts/k3.dtsi b/arch/riscv/dts/k3.dtsi
+index 152fdc58dbf..15bf7e83494 100644
+--- a/arch/riscv/dts/k3.dtsi
++++ b/arch/riscv/dts/k3.dtsi
+@@ -367,17 +367,10 @@
+ 		rpmi_mpxy_pwrkey: rpmi-mpxy-pwrkey@0 {
+ 			compatible = "riscv,rpmi-mpxy-pwrkey";
+ 			mboxes = <&rpmi_shmem_mbox 15>;
+ 			riscv,sbi-mpxy-channel-id = <15>;
+ 			status = "okay";
+ 		};
+ 
+-		rpmi_mpxy_sysreset: rpmi-mpxy-sysreset@0 {
+-			compatible = "riscv,rpmi-system-reset";
+-			mboxes = <&rpmi_shmem_mbox 3>;
+-			riscv,sbi-mpxy-channel-id = <3>;
+-			status = "okay";
+-		};
+-
+ 		ddr@3000000 {
+ 			u-boot,dm-spl;
+ 			compatible = "spacemit,snps-lp45";
